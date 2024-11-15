@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "dbfa7539-75a7-43d7-b4e5-ee265414b97c",
+		"name": "MAD MUSIC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17777195"
+	},
+	"item": [
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "authors/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/authors",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authors/:id/songs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/author/6732bf658a7f9bcd1e855332/songs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"author",
+								"6732bf658a7f9bcd1e855332",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "users/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/:id/playlists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/6732c056bc466e809ea1e65a/playlists",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"6732c056bc466e809ea1e65a",
+								"playlists"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Song",
+			"item": [
+				{
+					"name": "songs/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Fotografia 3X4\",\r\n    \"authorID\":\"6732bf7c8a7f9bcd1e855336\",\r\n    \"releasingYear\":\"1976\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/songs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"songs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "songs/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"releasingYear\": 1976\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/songs/67357829a7f0ee6006262613",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"songs",
+								"67357829a7f0ee6006262613"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "songs/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/songs/6734d29fe8fc1eb6dd27e4f6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"songs",
+								"6734d29fe8fc1eb6dd27e4f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "songs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/songs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"songs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Playlist",
+			"item": [
+				{
+					"name": "playlists/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Velharia\",\r\n    \"userID\": \"673559af0274e2cfa41ec262\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/playlists/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"playlists",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "playlists/:id/songs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"songID\": \"6734e89da043bee2ca26a981\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/playlists/67357dfdf144295c073a0d6f/songs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"playlists",
+								"67357dfdf144295c073a0d6f",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "playlists/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/playlists/6734ecfeac4c3f7aff90a852",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"playlists",
+								"6734ecfeac4c3f7aff90a852"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "playlists/:id/songs",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"songID\":\"6734e89da043bee2ca26a981\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/playlists/67357dfdf144295c073a0d6f/songs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"playlists",
+								"67357dfdf144295c073a0d6f",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "playlists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/playlists",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"playlists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "playlists/:id/songs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/playlists/67357dfdf144295c073a0d6f/songs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"playlists",
+								"67357dfdf144295c073a0d6f",
+								"songs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
